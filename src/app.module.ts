@@ -9,7 +9,7 @@ import { TodoModule } from './todo/todo.module';
     ConfigModule.forRoot({
       isGlobal: true, // Bütün modullarda əlçatan olsun
     }),
-    
+
     // 2. Database bağlantısı (Async istifadə edirik ki, ConfigService işə düşsün)
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -25,8 +25,8 @@ import { TodoModule } from './todo/todo.module';
         synchronize: true, // DİQQƏT: Production-da bunu 'false' edin, migration istifadə edin. Sadə app üçün 'true' qalsın.
       }),
     }),
-    
+
     TodoModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
